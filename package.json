@@ -1,0 +1,35 @@
+{
+  "name": "mvc_tech_blog",
+  "version": "1.0.0",
+  "description": "This project was completed in order to showcase my ability to build a full stack web application and utilize Model View Controllers",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brad-Hambrick/MVC_Tech_Blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brad-Hambrick/MVC_Tech_Blog/issues"
+  },
+  "homepage": "https://github.com/Brad-Hambrick/MVC_Tech_Blog#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "jest": "^29.2.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.25.3"
+  },
+  "devDependencies": {
+    "db-seed": "^1.2.0",
+    "nodemon": "^2.0.20"
+  }
+}
