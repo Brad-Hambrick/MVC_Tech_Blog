@@ -19,7 +19,7 @@
       <div class="navbar-start">
       
       </div>
-
+      {{#if loggedIn}}
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
@@ -32,7 +32,7 @@
             <a class="navbar-item">
               Login
             </a>
-            {{#if loggedIn}}
+            
             <a class="navbar-item">
               Logout
             </a>
@@ -51,4 +51,5 @@
 </section>
     </div>
 </body>
+
 </html>

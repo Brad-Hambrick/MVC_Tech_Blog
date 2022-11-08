@@ -11,11 +11,11 @@ router.get('/signup', (req, res) => {
 
 router.get('/', (req, res) => {
     Post.findAll({
-        attributes: ['id', 'title', 'created_at', 'post_content'],
+        attributes: ['id', 'title', 'post_content'],
         include: [
             {
                 model: Comment,
-                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                attributes: ['id', 'comment_text', 'post_id', 'user_id'],
                 include: [
                     {
                         model: User, 
@@ -40,11 +40,11 @@ router.get('/post/:id', (req, res) => {
         where: {
             id: req.params.id
         },
-        attributes: ['id', 'title', 'created_at', 'posted_content'],
+        attributes: ['id', 'title', 'posted_content'],
         include: [
             {
                 model: Comment,
-                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                attributes: ['id', 'comment_text', 'post_id', 'user_id'],
                 include: [
                     {
                         model: User, 
