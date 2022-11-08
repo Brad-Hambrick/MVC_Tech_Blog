@@ -25,7 +25,7 @@ router.get('/', (req, res) => {
             }
         ]
     }) .then(homeData => {
-        const post = homeData.map(post.get({ plain: true }));
+        const posts = homeData.map(post.get({ plain: true }));
         res.render('homepage', {
             post, loggedIn: req.session.loggedIn
         });
@@ -58,7 +58,7 @@ router.get('/post/:id', (req, res) => {
             res.status(404).json({message: 'There was no post found with that ID'});
             return;
         }
-        const post = homeData.get({ plain: true});
+        const posts = homeData.get({ plain: true});
 
         res.render('single-post', {
             post, loggedIn: req.session.loggedIn

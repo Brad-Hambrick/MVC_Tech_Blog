@@ -23,7 +23,7 @@ router.get('/', withAuth, (req, res) => {
     ],
 }) .then((dashboardData) => {
     
-    const post = dashboardData.map(post => post.get({ plain: true }));
+    const posts = dashboardData.map(post => post.get({ plain: true }));
 
     res.render('dashboard', { post, logedIn: true });
 
@@ -51,7 +51,7 @@ router.get('/create/', withAuth, (req, res) => {
         ]
     }) .then(dashboardData => {
 
-        const post = dashboardData.map(post.get({ plain: true }));
+        const posts = dashboardData.map(post.get({ plain: true }));
 
         res.render('create-post', { post, loggedIn: true });
 
@@ -84,7 +84,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
             res.status(404).json({message: 'No post located with that id'});
             return;
         }
-        const post = dashboardData.get({ plain: true });
+        const posts = dashboardData.get({ plain: true });
 
         res.render('edit-post', {
             post, loggedIn: true

@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    
+}
+
+.header {
+    font-size: 3rem;
+    background-color: #3273dc;
+    color: aliceblue;
+}
+
+.navbar-item {
+    font-size: 2rem;
+    border-radius: 20px;
+}
+
+.navbar {
+    background-color: lightblue;
+}
